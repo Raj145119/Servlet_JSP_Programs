@@ -1,0 +1,25 @@
+package sis.com.test;
+
+import sis.com.Dao.StudentDao;
+import sis.com.bo.Student;
+import sis.com.factory.StudentFactory;
+
+public class AddRecordTest {
+
+	public static void main(String[] args) {
+   StudentDao studentDao=StudentFactory.getStudentDao();
+   Student st=new Student();
+   
+   st.setName("bablu");
+   st.setBranch("mca");
+   st.setId(1);
+   st.setCollege("nit");
+   st.setContact("67762378");
+   st.setEmailId("hjhdsjh@");
+   st.setGender("male");
+   boolean yes=studentDao.addRecord(st);
+   System.out.println(yes);
+  
+	}
+
+}

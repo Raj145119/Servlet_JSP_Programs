@@ -1,0 +1,28 @@
+
+.input{
+background-color:#000000;
+color:#FFFFFF;
+font-size:18px;
+height:35px;
+margin-left:7px;
+border-radius:9px;
+border-bottom:1px solid #000000;
+border-left:1px solid #000000;
+width:90%;
+}
+.header{
+background-color:#990000;
+}
+
+.tab{
+background-color:#CCCCCC;
+}
+#footer{
+background-color:#9933FF;
+}
+.sub{
+background-color:#009900;
+height:40px;
+width:18%;
+border-radius:8px;
+}

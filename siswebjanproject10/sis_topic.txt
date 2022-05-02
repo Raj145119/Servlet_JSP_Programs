@@ -1,0 +1,139 @@
+/*
+@Author:Surendra Kumar Sao
+
+	>>Software Architect and Corporate Trainer
+	>>+10 year exp in (mumbai,pune,hyd,bangaluru)
+	>>Java Certified SCJP & SCWCD with 98%
+	Trained more than 5k students and employees.
+    MCA from (NIT)National Institute of Technology Raipur(C.G.)
+	Email : sur.nit.mca@gmail.com
+	Mobile 7987234544  , 9009442844
+	https://www.urbanpro.com/raipur/surendra-kumar-sao/reviews/7223178
+	https://www.urbanpro.com/raipur/surendra-kumar-sao/1334109?_tp=
+ 
+   CurrentYear ${2018} 
+ */
+Cookie
+
+
+
+
+
+  Open Declaration   javax.servlet.http.Cookie
+
+
+Creates a cookie, a small amount of information sent by a servlet to a Web browser, saved by the browser, and later sent back to the server.A cookie's value can uniquely identify a client, so cookies are commonly used for session management. 
+
+A cookie has a name, a single value, and optional attributessuch as a comment, path and domain qualifiers, a maximum age, and a version number. Some Web browsers have bugs in how they handle theoptional attributes, so use them sparingly to improve the interoperabilityof your servlets. 
+
+The servlet sends cookies to the browser by using the HttpServletResponse.addCookie method, which addsfields to HTTP response headers to send cookies to thebrowser, one at a time. 
+
+The browser is expected to support 20 cookies for each Web server, 300 cookies total, and may limit cookie size to 4 KB each. 
+
+The browser returns cookies to the servlet by addingfields to HTTP request headers. Cookies can be retrievedfrom a request by using the HttpServletRequest.getCookies method.Several cookies might have the same name but different path attributes. 
+
+Cookies affect the caching of the Web pages that use them.HTTP 1.0 does not cache pages that use cookies created withthis class. This class does not support the cache controldefined with HTTP 1.1. 
+
+This class supports both the Version 0 (by Netscape) and Version 1(by RFC 2109) cookie specifications. By default, cookies arecreated using Version 0 to ensure the best interoperability.
+Author:Various
+
+
+
+
+how to create  javax.servlet.http.Cookie Object
+
+Constructs a cookie with a specified name and value. 
+ Cookie  c  = new Cookie("key","value");
+
+how to send to browser??
+
+response.addCookie(Cookie cookie);
+
+
+//how to get cookies object frmo client
+request.get
+
+HttpServletRequest{
+ public Cookie[] getCookies();
+}
+
+
+Cookie{
+  String getName();
+  String getValue()
+ 
+}
+
+
+  
+  Open Declaration   void javax.servlet.http.Cookie.setMaxAge(int expiry)
+
+
+Sets the maximum age of the cookie in seconds. 
+
+A positive value indicates that the cookie will expireafter that many seconds have passed. Note that the value is the maximum age when the cookie will expire, not the cookie'scurrent age. 
+
+A negative value means that the cookie is not stored persistently and will be deletedwhen the Web browser exits. 
+A zero value causes the cookieto be deleted.
+
+Parameters:
+expiry an integer specifying the maximum age of thecookie in seconds; 
+if negative, meansthe cookie is not stored; 
+if zero, deletes the cookieSee Also:getMaxAge
+
+
+public void setMaxAge(int expiryInseconds) {
+    }
+
+
+public void setDomain(String pattern) {
+
+  Open Declaration   void javax.servlet.http.Cookie.setDomain(String pattern)
+
+
+Specifies the domain within which this cookie should be presented. 
+
+The form of the domain name is specified by RFC 2109. A domainname begins with a dot (.foo.com) and means thatthe cookie is visible to servers in a specified Domain Name System(DNS) zone (for example, www.foo.com, but not a.b.foo.com). By default, cookies are only returned to the server that sent them.
+
+Parameters:pattern a String containing the domain namewithin which this cookie is visible;form is according to RFC 2109See Also:getDomain
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+nterface javax.servlet.http.HttpSession {
+
+ abstract long getCreationTime();
+ 
+ abstract java.lang.String getId();
+ 
+ abstract java.lang.Object getAttribute(java.lang.String);
+ abstract void setAttribute(java.lang.String, java.lang.Object);
+ abstract void removeAttribute(java.lang.String);
+ 
+	Invalidates this session then unbinds any objects bound
+ abstract void invalidate();   //log out
+ 
+ abstract boolean isNew();
+ 
+ 
+ 
+ abstract void setMaxInactiveInterval(int);   5 *60  //in second
+
+Specifies the time, in seconds, between client requests before the servlet container will invalidate this session. 
+A negative time indicates the session should never timeout.
+Parameters:interval An integer specifying the numberof seconds 
+ 
+ abstract int getMaxInactiveInterval();
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+

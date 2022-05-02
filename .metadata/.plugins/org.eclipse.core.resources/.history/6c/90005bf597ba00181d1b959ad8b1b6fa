@@ -1,0 +1,6 @@
+package sis.com.Dao;
+
+public interface LoginDao {
+	
+
+}

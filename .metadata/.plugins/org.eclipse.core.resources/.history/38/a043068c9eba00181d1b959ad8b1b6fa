@@ -1,0 +1,9 @@
+package sis.com.factory;
+
+import sis.com.Dao.LoginDao;
+
+public final class LoginFactory  {
+public static LoginDao getLoginDao(){
+	return new LoginFactory(); 
+}
+}

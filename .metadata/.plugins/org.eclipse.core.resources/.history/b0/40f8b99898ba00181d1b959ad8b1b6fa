@@ -1,0 +1,26 @@
+package sis.com.impl;
+
+import java.sql.*;
+
+import sis.com.Dao.LoginDao;
+import sis.com.bo.UserLogin;
+import sis.com.util.SisDbUtil;
+
+public class LoginService implements LoginDao {
+
+	@Override
+	public UserLogin getLogin() {
+		Connection con=null;
+		PreparedStatement pstmt=null;
+		ResultSet rs=null;
+		try {
+			con=SisDbUtil.getConnection();
+		} catch (SQLException e) {
+             System.out.println("SQL errror");
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+}

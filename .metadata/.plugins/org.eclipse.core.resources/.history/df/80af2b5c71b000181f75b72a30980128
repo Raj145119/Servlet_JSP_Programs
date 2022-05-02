@@ -1,0 +1,42 @@
+package student.com.controler;
+
+import java.io.IOException;
+import java.sql.*;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import student.com.pjo.Student;
+
+public class ViewRecordControler extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Connection con=null;
+		Statement stmt=null;
+		ArrayList<Student>list=new ArrayList<Student>();
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:XE";
+			String user="system";
+			String password="system";
+			con=DriverManager.getConnection(url,user,password);
+			String sql="select * from Student5";
+			stmt=con.createStatement();
+			ResultSet rs=stmt.executeQuery(sql);
+		while(rs.next()){
+			
+		}
+		} catch (ClassNotFoundException e) {
+            System.out.println("Class not found");
+			e.printStackTrace();
+		} catch (SQLException e) {
+			System.out.println("Sql error");
+			e.printStackTrace();
+		}
+	}
+
+}

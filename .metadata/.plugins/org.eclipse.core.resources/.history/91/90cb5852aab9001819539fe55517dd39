@@ -1,0 +1,5 @@
+package sis.com.Dao;
+
+public interface StudentDao {
+
+}

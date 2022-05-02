@@ -1,0 +1,70 @@
+body{
+padding:0px;
+margin:0px;
+background:url(../../img/img3.jpg);
+background-size:cover;
+font-family:sans-serif;
+}
+.box{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:400px;
+padding:40px;
+box-sizing:border-box;
+box-shadow:0,15px,25px,rgba(0,0,0,.5);
+border-radius:10px;
+background:rgba(0,0,0,.8);
+}
+.box h2{
+margin:0,0,30px;
+padding:0px;
+color:#FFFFFF;
+text-align:center;
+}
+.box .inputBox{
+position:relative;
+}
+
+.box  .inputBox input {
+width:100%;
+padding:10px,0;
+font-size:30px;
+margin-bottom:30px;
+border:none;
+outline:none;
+background:transparent;
+color:#FFFFFF;
+border-bottom:1px solid #FFFFFF;
+}
+.box  .inputBox label{
+position:absolute;
+top:0;
+left:0;
+padding:10px,0;
+font-size:30px;
+color:#fff;
+pointer-events:none;
+transition:.5ps;
+}
+
+.box .inputBox input:focus~label,
+.box .inputBox input:valid~label{
+top:-20px;
+left:0px;
+color:#0000FF;
+font-size:14px;
+}
+
+.box input[type=submit]{
+background:transparent;
+outline:none;
+border:none;
+color:#fff;
+padding:10px 20px;
+cursor:pointer;
+background:#0000FF;
+border-radius:5px;
+
+}

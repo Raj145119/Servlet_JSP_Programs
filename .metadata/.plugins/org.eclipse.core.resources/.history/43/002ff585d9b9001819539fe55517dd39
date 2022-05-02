@@ -1,0 +1,27 @@
+package sis.com.test;
+
+import java.util.List;
+
+import sis.com.Dao.StudentDao;
+import sis.com.bo.Student;
+import sis.com.factory.StudentFactory;
+
+public class SearchByNameTest {
+
+	public static void main(String[] args) {
+  StudentDao studentDao=StudentFactory.getStudentDao();
+      List arr=studentDao.searchRecordByName("bablu");
+    Student arrr=(Student)arr;
+      System.out.println(arr.toString());
+      /* for(Student stu:arr){
+    	  stu.getId();
+    	  stu.getName();
+    	  stu.getGender();
+    	  stu.getContact();
+    	  stu.getEmailId();
+    	  stu.getCollege();
+    	  stu.getBranch();
+      }*/
+	}
+
+}

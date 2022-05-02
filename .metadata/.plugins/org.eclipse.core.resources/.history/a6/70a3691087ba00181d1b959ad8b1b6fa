@@ -1,0 +1,16 @@
+create table Student6(
+ id  number(10) primary key,
+ name  varchar(40) not null,
+ gender varchar(20) not null,
+ email varchar(50) unique,
+  contact number(20) not null unique,
+ college varchar(50) not null,
+ branch varchar(30) not null);
+
+desc Student6;
+select * from Student6 order by id asc;
+
+insert into Student6 (id,name,gender,email,contact,college,branch) values
+((select  nvl(max(id),1000)+1 from Student6),'bab','male','bappbluagrahari07@gmail.com',95650072546,'nit','mca');
+
+update Student6 set name=?,gender=?,contact=?,email=?,colege=?,branch=? where id=1001;

@@ -1,0 +1,10 @@
+create table Student6(
+number(10) id primary key,
+varchar(40) name not null,
+varchar(20) gender not null,
+varchar(50) email  unique,
+number(20)  contact not null unique,
+varchar(50) college not null,
+varchar(30) branch not null,
+
+)

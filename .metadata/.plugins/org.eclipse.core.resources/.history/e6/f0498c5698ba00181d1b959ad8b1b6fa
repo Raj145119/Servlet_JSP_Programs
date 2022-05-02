@@ -1,0 +1,18 @@
+package sis.com.impl;
+
+import java.sql.*;
+
+import sis.com.Dao.LoginDao;
+import sis.com.bo.UserLogin;
+
+public class LoginService implements LoginDao {
+
+	@Override
+	public UserLogin getLogin() {
+		Connection con=null;
+		
+		
+		return null;
+	}
+
+}

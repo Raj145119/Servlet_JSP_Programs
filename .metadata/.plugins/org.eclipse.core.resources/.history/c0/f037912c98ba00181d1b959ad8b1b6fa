@@ -1,0 +1,7 @@
+package sis.com.impl;
+
+import sis.com.Dao.LoginDao;
+
+public class LoginService implements LoginDao {
+
+}

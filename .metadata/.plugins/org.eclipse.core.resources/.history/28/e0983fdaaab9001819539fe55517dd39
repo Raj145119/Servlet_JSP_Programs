@@ -1,0 +1,11 @@
+package sis.com.Dao;
+
+import sis.com.bo.Student;
+
+public interface StudentDao {
+ 
+	boolean AddRecord(Student student);
+	boolean DeleteRecord(long id);
+	boolean SearchRecord(long id);
+	boolean UpdateRecord(Student student);
+}

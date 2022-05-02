@@ -1,0 +1,21 @@
+package sis.com.test;
+
+import sis.com.Dao.LoginDao;
+import sis.com.bo.UserLogin;
+import sis.com.factory.StudentFactory;
+
+public class LoginTest {
+
+	public static void main(String[] args) {
+     LoginDao loginDao=StudentFactory.getLoginDao();
+     UserLogin user=new UserLogin();
+     user.setUserName("sunil");
+     user.setUserPassword("321");
+     UserLogin log=loginDao.getLogin(user);
+     System.out.println("Id:"+log.getId());
+    System.out.println("Name:"+log.getName());
+    System.out.println("Role:"+log.getRole());
+     
+	}
+
+}
